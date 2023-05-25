@@ -1,0 +1,171 @@
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    /*  padding: 2rem; */
+    text-align: center;
+    /*   background-image: url("832079.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.card {
+    padding: 2em;
+}
+
+.read-the-docs {
+    color: #888;
+}
+.App {
+    display: flex;
+    flex-direction: column;
+}
+.App > .bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+}
+.App > .cat {
+    width: 120px;
+
+    aspect-ratio: 4/5;
+}
+.cat.shake {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+@keyframes tilt-n-move-shaking {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(5px, 5px) rotate(5deg);
+    }
+    50% {
+        transform: translate(0, 0) rotate(0eg);
+    }
+    75% {
+        transform: translate(-5px, 5px) rotate(-5deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+.App > ol {
+    list-style: none;
+    counter-reset: days-counter;
+    font-size: 1.5rem;
+    position: relative;
+}
+.App > ol li {
+    counter-increment: days-counter;
+    /* center the content in the viewport */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-shadow: 0 1px 5px hsla(0, 0%, 0%, 0.8);
+    /* position relative to absolute position the pseudo element behind the text */
+    z-index: 5;
+    height: 2rem;
+}
+/* .App ol li:before {
+    content: counter(days-counter);
+    z-index: -5;
+    position: absolute;
+    opacity: 0.5;
+    font-size: 15vh;
+    font-family: "Major Mono Display", monospace;
+    transform: translate(-50%, 0%);
+} */
+.App ol li::selection {
+    color: hsl(0, 0%, 100%);
+    background: hsl(130, 50%, 35%);
+}
+.App ol li:nth-child(odd):before {
+    left: 0%;
+}
+.App ol li:nth-child(even):before {
+    left: 100%;
+}
+.App ol li {
+    position: sticky;
+}
+
+.App ol li:nth-child(1) {
+    top: 0vh;
+    height: 100vh;
+}
+.App ol li:nth-child(2) {
+    top: 7.5vh;
+    height: 92.5vh;
+}
+.App ol li:nth-child(3) {
+    top: 15vh;
+    height: 85vh;
+}
+.App ol li:nth-child(4) {
+    top: 22.5vh;
+    height: 77.5vh;
+}
+.App ol li:nth-child(5) {
+    top: 40vh;
+    height: 60vh;
+}
+.App ol li:nth-child(6) {
+    top: 37.5vh;
+    height: 62.5vh;
+}
+.App ol li:nth-child(7) {
+    top: 45vh;
+    height: 55vh;
+}
+.App ol li:nth-child(8) {
+    top: 52.5vh;
+    height: 47.5vh;
+}
+.App ol li:nth-child(9) {
+    top: 60vh;
+    height: 40vh;
+}
+.App ol li:nth-child(10) {
+    top: 67.5vh;
+    height: 32.5vh;
+}
+.App ol li:nth-child(11) {
+    top: 75vh;
+    height: 25vh;
+}
+.App ol li:nth-child(12) {
+    top: 82.5vh;
+    height: 17.5vh;
+}
